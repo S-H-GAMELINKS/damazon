@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Using devise
 gem 'devise'
+
+# Using Materialize
+gem 'materialize-sass', '~> 1.0.0'
