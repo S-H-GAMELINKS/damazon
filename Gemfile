@@ -66,6 +66,7 @@ gem 'devise'
 
 # Using Materialize
 gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons'
 
 # Using Socialization
 gem 'socialization'
