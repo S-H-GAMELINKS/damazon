@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get '/users/mypage', to: 'user#mypage'
   get '/users/mypage/edit', to: 'user#edit'
+  patch '/users/mypage', to: 'user#update'
   devise_for :admin_users
   devise_for :users
   resources :products do
