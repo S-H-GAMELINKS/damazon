@@ -1,5 +1,6 @@
 class UserController < ApplicationController
   def mypage
+    @likes = current_user.likees(Product)
   end
 
   def edit

@@ -3,6 +3,11 @@
 <%= current_user.address %>
 <%= current_user.phone %>
 
+<% @likes.each do |like| %>
+    <%= like.name %>
+    <%= like.price %>
+<% end %>
+
 <%= link_to 'Edit', users_mypage_edit_path %>
 
 <%= link_to 'Password & Email Edit', edit_user_registration_path %>
