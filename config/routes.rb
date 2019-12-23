@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'carts/index'
+  get 'carts/create'
+  get 'carts/edit'
+  get 'carts/update'
+  get 'carts/destroy'
   get '/users/mypage', to: 'user#mypage'
   get '/users/mypage/edit', to: 'user#edit'
   patch '/users/mypage', to: 'user#update'
