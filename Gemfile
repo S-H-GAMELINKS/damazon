@@ -69,3 +69,6 @@ gem 'materialize-sass', '~> 1.0.0'
 
 # Using Socialization
 gem 'socialization'
+
+# Using Kaminari
+gem 'kaminari'
