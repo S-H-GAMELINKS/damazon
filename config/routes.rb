@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :admin_users
   devise_for :users
   resources :products do
+    member do
+      post :like
+    end
     resources :reviews, only: [:create, :update, :destroy]
   end
   resources :categories
