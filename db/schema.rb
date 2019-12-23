@@ -25,7 +25,13 @@ ActiveRecord::Schema.define(version: 2019_12_23_074933) do
   end
 
   create_table "cart_items", force: :cascade do |t|
-    t.string "shopping_cart_item_fields"
+    t.integer "owner_id"
+    t.string "owner_type"
+    t.integer "quantity"
+    t.integer "item_id"
+    t.string "item_type"
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "USD", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
