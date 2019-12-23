@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   patch '/users/mypage', to: 'user#update'
   devise_for :admin_users
   devise_for :users
+  resources :carts, only: [:index, :create, :edit, :update, :destroy]
   resources :products do
     member do
       post :like
