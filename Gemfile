@@ -73,3 +73,6 @@ gem 'socialization'
 
 # Using Kaminari
 gem 'kaminari'
+
+# Using Ransack
+gem 'ransack'
