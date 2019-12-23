@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <%= search_form_for @q, remote: true, id: 'search_category' do |f| %>
+  <%= f.select( :sorts, { '価格の安い順': 'price asc', '価格の高い順': 'price desc', '出品の古い順': 'updated_at asc', '出品の新しい順': 'updated_at desc' }) %>
   <%= f.label :category_id_cont, 'カテゴリー' %>
   <%= f.collection_select :category_id_eq, @categories, :id, :name, {data: {remote: true}} %>
   <%= f.submit '', :style => 'display: none;' %>
