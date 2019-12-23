@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'user/mypage'
-  get 'user/edit'
+  get '/users/mypage', to: 'user#mypage'
+  get '/users/mypage/edit', to: 'user#edit'
   devise_for :admin_users
   devise_for :users
   resources :products do
