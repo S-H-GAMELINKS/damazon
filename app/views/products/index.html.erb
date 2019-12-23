@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<%= search_form_for @q, remote: true, id: 'search_category' do |f| %>
+  <%= f.label :category_id_cont, 'カテゴリー' %>
+  <%= f.collection_select :category_id_eq, @categories, :id, :name, {data: {remote: true}} %>
+  <%= f.submit '', :style => 'display: none;' %>
+<% end %>
+
 <h1>Products</h1>
 
 <table>
@@ -33,3 +39,12 @@
 <%= paginate @products %>
 
 <%= link_to 'New Product', new_product_path %>
+
+<script type="text/javascript">
+
+const selectElement = document.querySelector('#search_category');
+
+selectElement.addEventListener('change', (event) => {
+  selectElement.submit();
+});
+</script>
