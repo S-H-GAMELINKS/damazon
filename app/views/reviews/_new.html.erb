@@ -1,0 +1,5 @@
+<%= form_with model: [@product, Review.new], local: true do |form| %>
+    <%= form.number_field :score, in: 1..5, step: 1, value: 5 %>
+    <%= form.text_area :content %>
+    <%= form.submit %>
+<% end %>
