@@ -76,3 +76,6 @@ gem 'kaminari'
 
 # Using Ransack
 gem 'ransack'
+
+# Using Acts As Shopping Cart
+gem 'acts_as_shopping_cart'
