@@ -66,3 +66,6 @@ gem 'devise'
 
 # Using Materialize
 gem 'materialize-sass', '~> 1.0.0'
+
+# Using Socialization
+gem 'socialization'
