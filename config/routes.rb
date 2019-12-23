@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'reviews/create'
+  get 'reviews/update'
+  get 'reviews/destroy'
   devise_for :admin_users
   devise_for :users
   resources :products
