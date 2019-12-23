@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/mypage'
+  get 'user/edit'
   devise_for :admin_users
   devise_for :users
   resources :products do
