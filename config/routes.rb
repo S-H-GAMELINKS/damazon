@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  get 'cart_items/update'
-  get 'cart_items/destroy'
   get '/users/mypage', to: 'user#mypage'
   get '/users/mypage/edit', to: 'user#edit'
   patch '/users/mypage', to: 'user#update'
   devise_for :admin_users
   devise_for :users
+  resources :cart_items, only: [:update, :destroy]
   resources :carts, only: [:index, :create, :edit, :update, :destroy]
   resources :products do
     member do
