@@ -1,8 +1,12 @@
 <h1>Cart Index</h1>
 
-<% @cart.cart_items.each do |item| %>
-    <%= item.item.name %>
-    <%= item.item.price %>
-    <%= item.item.description %>
-    <%= item.quantity %>
+<% if @cart %>
+    <%= link_to 'Remove All Items', cart_path(@cart), method: 'delete', data: {confirm: 'OK?'} %>
+
+    <% @cart.cart_items.each do |item| %>
+        <%= item.item.name %>
+        <%= item.item.price %>
+        <%= item.item.description %>
+        <%= item.quantity %>
+    <% end %>
 <% end %>
