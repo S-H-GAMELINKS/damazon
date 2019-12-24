@@ -15,3 +15,12 @@
  *= require_self
  */
  @import "materialize";
+
+ #preload {
+    position: relative;
+    top: 40vh;
+ }
+
+ #loaded {
+     display: none;
+ }

@@ -10,9 +10,14 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <%= yield %>
+    <div id="preload" class="center">
+      <%= render 'layouts/preload' %>
+    </div>
+    <div id="loaded">
+      <%= render 'layouts/header' %>
+      <div class="container">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
