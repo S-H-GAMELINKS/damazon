@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'web/index'
+  get 'web/about'
+  get 'web/contact'
   get '/users/mypage', to: 'user#mypage'
   get '/users/mypage/edit', to: 'user#edit'
   patch '/users/mypage', to: 'user#update'
