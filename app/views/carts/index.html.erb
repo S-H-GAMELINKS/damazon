@@ -7,7 +7,10 @@
         <%= item.item.name %>
         <%= item.item.price %>
         <%= item.item.description %>
-        <%= item.quantity %>
+        <%= form_with model: item, local: true do |form| %>
+            <%= form.number_field :quantity %>
+            <%= form.submit %>
+        <% end %>
     <% end %>
 
     <%= link_to 'Order', edit_cart_path(@cart) %>
