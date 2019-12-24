@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :set_product
+  before_action :set_product, only: [:create]
 
   def index
   end
