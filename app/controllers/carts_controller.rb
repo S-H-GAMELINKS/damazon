@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   before_action :set_product, only: [:create, :update]
-  before_action :set_cart, only: [:destroy]
+  before_action :set_cart, only: [:edit, :destroy]
 
   def index
     @cart = current_user.carts.get_active_cart

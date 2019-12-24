@@ -9,4 +9,6 @@
         <%= item.item.description %>
         <%= item.quantity %>
     <% end %>
+
+    <%= link_to 'Order', edit_cart_path(@cart) %>
 <% end %>
