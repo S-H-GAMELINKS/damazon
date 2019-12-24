@@ -11,6 +11,7 @@
             <%= form.number_field :quantity %>
             <%= form.submit %>
         <% end %>
+        <%= link_to 'Remove Cart', cart_item_path(item), data: {confirm: 'Are you sure?'}, method: :delete %>
     <% end %>
 
     <%= link_to 'Order', edit_cart_path(@cart) %>
