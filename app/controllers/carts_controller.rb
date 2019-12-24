@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
-  before_action :set_product, only: [:create, :update]
-  before_action :set_cart, only: [:edit, :destroy]
+  before_action :set_product, only: [:create]
+  before_action :set_cart, only: [:edit, :update, :destroy]
 
   def index
     @cart = current_user.carts.get_active_cart
@@ -23,6 +23,8 @@ class CartsController < ApplicationController
   end
 
   def update
+    @cart.update!(done: true)
+    redirect_to products_path
   end
 
   def destroy
