@@ -1,3 +1,8 @@
 <h1>Cart Index</h1>
 
-<%= @cart.cart_items.product %>
+<% @cart.cart_items.each do |item| %>
+    <%= item.item.name %>
+    <%= item.item.price %>
+    <%= item.item.description %>
+    <%= item.quantity %>
+<% end %>
