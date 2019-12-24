@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cart_items/update'
+  get 'cart_items/destroy'
   get '/users/mypage', to: 'user#mypage'
   get '/users/mypage/edit', to: 'user#edit'
   patch '/users/mypage', to: 'user#update'
