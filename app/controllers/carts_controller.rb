@@ -2,6 +2,7 @@ class CartsController < ApplicationController
   before_action :set_product, only: [:create]
 
   def index
+    @cart = current_user.carts.get_active_cart
   end
 
   def create
