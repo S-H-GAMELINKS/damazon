@@ -9,7 +9,7 @@
         <%= item.item.description %>
         <%= form_with model: item, local: true do |form| %>
             <%= form.number_field :quantity %>
-            <%= form.submit %>
+            <%= form.submit "Buy", data: { confirm: 'Are you sure?' } %>
         <% end %>
         <%= link_to 'Remove Cart', cart_item_path(item), data: {confirm: 'Are you sure?'}, method: :delete %>
     <% end %>
