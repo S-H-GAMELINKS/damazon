@@ -82,3 +82,6 @@ gem 'acts_as_shopping_cart'
 
 # Using Faker
 gem 'faker'
+
+# Using Administarate
+gem "administrate"
