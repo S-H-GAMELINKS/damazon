@@ -12,15 +12,10 @@
   </head>
 
   <body>
-    <div id="preload" class="center">
-      <%= render 'layouts/preload' %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
     </div>
-    <div id="loaded">
-      <%= render 'layouts/header' %>
-      <div class="container">
-        <%= yield %>
-      </div>
-      <%= render 'layouts/footer' %>
-    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
