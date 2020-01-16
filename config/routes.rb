@@ -24,6 +24,9 @@ Rails.application.routes.draw do
     member do
       post :like
     end
+    collection do
+      post :import_csv
+    end
     resources :reviews, only: [:create, :update, :destroy]
   end
   resources :categories

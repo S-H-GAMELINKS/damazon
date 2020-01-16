@@ -75,6 +75,12 @@ class ProductsController < ApplicationController
     end
   end
 
+  # POST /products/import/csv
+  def import_csv
+    Product.import_csv(params[:file])
+    redirect_to admin_products_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
