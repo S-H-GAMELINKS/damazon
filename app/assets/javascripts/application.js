@@ -13,5 +13,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require materialize
+//= link administrate/application.css
+//= link administrate/application.js
 //= require turbolinks
 //= require_tree .
