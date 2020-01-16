@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :follows
+      resources :likes
+      resources :mentions
+      resources :admin_users
+      resources :users
+      resources :carts
+      resources :cart_items
+      resources :categories
+      resources :products
+      resources :reviews
+
+      root to: "follows#index"
+    end
   root 'web#index'
   get '/about', to: 'web#about'
   get '/contact', to: 'web#contact'
