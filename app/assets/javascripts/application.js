@@ -15,10 +15,3 @@
 //= require materialize
 //= require turbolinks
 //= require_tree .
-
-window.addEventListener("load", function () {
-    let preload = document.getElementById('preload');
-    preload.style.display = 'none';
-    let loaded = document.getElementById('loaded');
-    loaded.style.display = 'block';
-});
