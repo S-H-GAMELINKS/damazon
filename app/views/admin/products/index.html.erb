@@ -33,9 +33,11 @@ It renders the `_table` partial to display details about the resources.
   </h1>
 
   <%= form_with url: import_csv_products_path, method: :post do |form| %>    
-    <%= file_field_tag :file, class: 'file-field' %>
-    <%= submit_tag "Import Product for CSV" %>
+    <%= form.file_field :file, class: 'file-field' %>
+    <%= form.submit "Import Product for CSV" %>
   <% end %>
+
+  <%= link_to "Export Product to CSV", export_csv_products_path(format: :csv), class: "btn btn-primary"%>
 
   <% if show_search_bar %>
     <%= render(

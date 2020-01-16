@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     end
     collection do
       post :import_csv
+      get :export_csv
     end
     resources :reviews, only: [:create, :update, :destroy]
   end

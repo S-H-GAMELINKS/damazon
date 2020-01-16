@@ -81,6 +81,15 @@ class ProductsController < ApplicationController
     redirect_to admin_products_path
   end
 
+  def export_csv
+    output_csv = Product.export_csv
+    respond_to do |format|
+      format.csv do
+        send_data output_csv, filename: "products.csv"
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
