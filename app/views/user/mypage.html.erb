@@ -1,13 +1,25 @@
-<%= current_user.name %>
-<%= current_user.postal_code %>
-<%= current_user.address %>
-<%= current_user.phone %>
+<div class="collection">
+    <h3 class="collection-item"><%= current_user.name %></h3>
+    <h3 class="collection-item"><%= current_user.postal_code %></h3>
+    <h3 class="collection-item"><%= current_user.address %></h3>
+    <h3 class="collection-item"><%= current_user.phone %></h3>
+</div>
 
 <% @likes.each do |like| %>
-    <%= like.name %>
-    <%= like.price %>
+    <div class="collection">
+        <p class="collection-item">
+            Name:<%= like.name %>
+        </p>
+        <p class="collection-item">
+            <%= like.price %>
+        </p>
+    </div>
 <% end %>
 
-<%= link_to 'Edit', users_mypage_edit_path %>
+<div class="center">
+    <%= link_to 'Edit', users_mypage_edit_path, class: 'btn btn-primary' %>
+</div>
 
-<%= link_to 'Password & Email Edit', edit_user_registration_path %>
+<div class="center" style="margin: 1rem;">
+    <%= link_to 'Password & Email Edit', edit_user_registration_path, class: 'btn btn-primary' %>
+</div>
