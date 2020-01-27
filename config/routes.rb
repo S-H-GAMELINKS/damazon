@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
+      resources :dashboards, only: [:index]
       resources :admin_users
       resources :users
       resources :carts
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
       resources :categories
       resources :products
       resources :reviews
-      resources :dashboards, only: [:index]
 
       root to: "dashboards#index"
     end
