@@ -25,7 +25,8 @@ class CartsController < ApplicationController
   end
 
   def update
-    @cart.update!(done: true)
+    @cart.done = true
+    @cart.update!
     redirect_to products_path
   end
 
