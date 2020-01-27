@@ -7,8 +7,9 @@ Rails.application.routes.draw do
       resources :categories
       resources :products
       resources :reviews
+      resources :dashboards, only: [:index]
 
-      root to: "admin_users#index"
+      root to: "dashboards#index"
     end
   root 'web#index'
   get '/about', to: 'web#about'
