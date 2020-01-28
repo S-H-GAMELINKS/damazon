@@ -26,6 +26,7 @@
 <% end %>
 
 <form action="/users/token" method="post">
-    <script type="text/javascript" src="https://checkout.pay.jp/" class="payjp-button" data-key="<%= ENV['PAYJP_PUBLIC_KEY'] %>" data-on-created="onCreated" data-text="支払う" data-submit-text="支払う" data-partial="true"></script>
-    <input type="submit" value="送信する">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+  <script type="text/javascript" src="https://checkout.pay.jp/" class="payjp-button" data-key="<%= ENV['PAYJP_PUBLIC_KEY'] %>" data-on-created="onCreated" data-text="支払う" data-submit-text="支払う" data-partial="true"></script>
+  <input type="submit" value="送信する">  
 </form>
