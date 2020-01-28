@@ -88,3 +88,6 @@ gem "administrate"
 
 # Using PAY.JP
 gem "payjp"
+
+# Using ENV
+gem "dotenv-rails"
