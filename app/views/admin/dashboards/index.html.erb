@@ -1,3 +1,8 @@
 <p>Today Profit: <%= @today_profit %></p>
 
 <p>Month Profit: <%= @month_profit %></p>
+
+<% @month_buy_cart.each do |cart| %>
+    <%= cart.updated_at.strftime('%Y/%m/%d') %>
+    <%= cart.cart_items.sum{|i| (i[:quantity] * i[:price_cents])} %>
+<% end %>
