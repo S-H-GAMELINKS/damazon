@@ -14,7 +14,7 @@
         <%= link_to 'Remove Cart', cart_item_path(item), data: {confirm: 'Are you sure?'}, method: :delete %>
     <% end %>
 
-    <%= link_to 'Order', edit_cart_path(@cart) %>
+    <%= link_to 'Order', cart_path(@cart), method: :put%>
 
     <%= @total %>
 <% end %>
