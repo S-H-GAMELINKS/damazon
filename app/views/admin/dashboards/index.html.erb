@@ -6,3 +6,5 @@
     <%= cart.updated_at.strftime('%Y/%m/%d') %>
     <%= cart.cart_items.sum{|i| (i[:quantity] * i[:price_cents])} %>
 <% end %>
+
+<p> User Count: <%= @user_count %>

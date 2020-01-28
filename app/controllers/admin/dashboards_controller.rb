@@ -15,6 +15,8 @@ module Admin
         @month_profit = @month_buy_cart.sum{|cart|
           cart.cart_items.sum{|i| (i[:quantity] * i[:price_cents]) }
         }
+
+        @user_count = User.count
     end
   end
 end
