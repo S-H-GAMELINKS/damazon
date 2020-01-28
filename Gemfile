@@ -85,3 +85,6 @@ gem 'faker'
 
 # Using Administarate
 gem "administrate"
+
+# Using PAY.JP
+gem "payjp"
