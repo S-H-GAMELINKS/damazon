@@ -4,8 +4,11 @@ class CartsController < ApplicationController
 
   def index
     @cart = current_user.carts.get_active_cart
-    @total = 0
-    @cart.cart_items.each{|p| @total = p.item.carriage ? (p.p.price + 800) * p.quantity : p.price * p.quantity } if !@cart.nil?
+    if @cart.nil?
+      @total = 0
+    else
+      @total = @cart.cart_items.sum{|p| p.item.carriage ? (p.p.price + 800) * p.quantity : p.price * p.quantity } 
+    end
   end
 
   def create
