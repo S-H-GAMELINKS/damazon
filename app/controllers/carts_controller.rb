@@ -29,6 +29,19 @@ class CartsController < ApplicationController
 
   def update
     @cart.update!(done: true)
+
+    @total = @cart.cart_items.sum{|p| p.item.carriage ? (p.p.price + 800) * p.quantity : p.price * p.quantity }
+
+    puts @total
+
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+
+    charge = Payjp::Charge.create(
+      :amount => @total.to_i,
+      :card => current_user.token,
+      :currency => 'jpy',
+    )
+
     redirect_to products_path
   end
 
