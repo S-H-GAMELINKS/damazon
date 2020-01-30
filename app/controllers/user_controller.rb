@@ -13,7 +13,13 @@ class UserController < ApplicationController
   end
 
   def token
-    current_user.update(token: params["payjp-token"])
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+
+    customer = Payjp::Customer.create(
+      :card => params["payjp-token"]
+    )
+
+    current_user.update(token: customer.id)
     redirect_to users_mypage_path
   end
 

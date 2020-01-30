@@ -38,7 +38,7 @@ class CartsController < ApplicationController
 
     charge = Payjp::Charge.create(
       :amount => @total.to_i,
-      :card => current_user.token,
+      :customer => current_user.token,
       :currency => 'jpy',
     )
 
