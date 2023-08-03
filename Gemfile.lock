@@ -181,7 +181,8 @@ GEM
     polyamorous (2.3.0)
       activerecord (>= 5.0)
     public_suffix (5.0.0)
-    puma (3.12.6)
+    puma (4.3.12)
+      nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.7)
     rack-test (1.1.0)
@@ -314,7 +315,7 @@ DEPENDENCIES
   material_icons
   materialize-sass (~> 1.0.0)
   payjp
-  puma (~> 3.12)
+  puma (~> 4.3)
   rails (~> 5.2.4)
   ransack
   sass-rails (~> 5.0)
